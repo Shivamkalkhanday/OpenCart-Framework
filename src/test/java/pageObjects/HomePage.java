@@ -11,11 +11,14 @@ public class HomePage  extends BasePage{
 		super(driver);
 	}
 	
-	@FindBy(xpath="")
+	@FindBy(xpath="//a[@title='My Account']")
 	WebElement InkMyAccount;
 	
-	@FindBy(xpath="")
+	@FindBy(xpath="//a[normalize-space()='Register']")
 	WebElement InkRegister;
+	
+	@FindBy(xpath="//a[normalize-space()='Login']")
+	WebElement InkLogin;
 	
 	public void clickMyAccount()
 	{
@@ -25,6 +28,11 @@ public class HomePage  extends BasePage{
 	public void clickRegister()
 	{
 		InkRegister.click();
+	}
+	
+	public void clickLogin()
+	{
+		InkLogin.click();
 	}
 
 }
